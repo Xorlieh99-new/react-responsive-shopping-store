@@ -1,0 +1,81 @@
+nav.responsive-toolbar {
+  background: #333;
+  height: 60px;
+  width: 100%;
+  position: fixed;
+  font-family: 'Impact';
+  box-shadow: 2px 2px 2px #ccc;
+
+  ul {
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+    align-items: center;
+    justify-content: flex-end;
+    background: #333;
+    box-shadow: 2px 2px 2px #ccc;
+
+    @media (max-width: 768px) {
+      height: 100%;
+      width: 300px;
+      position: fixed;
+      left: -300px;
+      top: 60px;
+      flex-direction: column;
+      transition: 300ms ease all;
+      justify-content: flex-start;
+    }
+
+    &.active {
+      @media (max-width: 768px) {
+        left: 0px;
+        margin: 0px;
+      }
+    }
+
+    figure {
+      // margin-block-start: 0;
+      // margin-block-end: 0;
+      // margin-inline-start: 2px;
+      // margin-inline-end: 0;
+      width: 40px;
+      height: 40px;
+      margin: 0px auto 0px 20px;
+      cursor: pointer;
+
+      @media (max-width: 768px) {
+        position: fixed;
+        left: 10px;
+        top: 10px;
+        margin: 0px auto 0px 10px;
+      }
+    }
+
+    li {
+      list-style-type: none;
+      margin: 0 15px;
+
+      @media (max-width: 768px) {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+        margin: 0px;
+      }
+    }
+
+    a {
+      color: #fff;
+      text-decoration: none;
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      padding: 10px 20px;
+
+      @media (max-width: 768px) {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+  }
+}
